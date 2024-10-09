@@ -21,7 +21,7 @@ tag_plugins:
     bbgif: https://emoj.ml/ablob%s.gif
 
 search:
-  service: local_search # local_search, 
+  service: local_search # local_search,
   local_search: # 在 front-matter 中设置 indexing:false 来避免被搜索索引
     field: post # post, page, all
     path: /search.json # 搜索文件存放位置
