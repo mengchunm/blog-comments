@@ -1,8 +1,10 @@
 ---
 title: java学习
-cover: https://s3.amazonaws.com/com.twilio.prod.twilio-docs/original_images/java-logo-wide.jpg
+cover: https://images.weserv.nl/?url=https://article.biliimg.com/bfs/article/58be6ff09e814f4d02ea6a631eeb7461a52426e1.jpg
 ---
-```
+
+记录下java作业
+<!-- more --><!-- more -->
 
 ## 第五章
 
@@ -122,6 +124,92 @@ public class Account2007210530{
 		System.out.println("余额: "+account.getBalance()+"\n"+"月利息: "+account.getMonthlyInterest()+"\n"+"开户日期: "+account.getDateCreated());
 	}
 }
-
 ```
+## 第十一章
 
+### 11.2 Person类
+
+```java
+package chapter11;
+import java.util.Date;
+
+class Person{
+    private String name;
+    private String address;
+    private String phoneNumber;
+    private String email;
+    Person(String name,String address,String phoneNumber,String email){
+        this.name = name;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+    public String getThisName(){
+        return this.name;
+    }
+    public String toString(){
+        return ("Person " + this.name);
+    }
+}
+class Student extends Person{
+    private String grade;
+    Student(String name,String address,String phoneNumber,String email,String grade){
+        super(name,address,phoneNumber,email);
+        this.grade = grade;
+    }
+    public String toString(){
+        return ("Student " + this.getThisName());
+    }
+}
+class Employee extends Person{
+    private String office;
+    private double salary;
+    private Date acceptDate;
+
+    Employee(String name,String address,String phoneNumber,String email,String office,double salary,Date acceptDate){
+        super(name,address,phoneNumber,email);
+        this.office = office;
+        this.salary = salary;
+        this.acceptDate = acceptDate;
+    }
+    public String toString(){
+        return ("Employee " + this.getThisName());
+    }
+}
+class Faculty extends Employee{
+    private Date workDate;
+    private int level;
+    Faculty(String name,String address,String phoneNumber,String email,String office,double salary,Date acceptDate,Date workDate,int level){
+        super(name,address,phoneNumber,email,office,salary,acceptDate);
+        this.level = level;
+        this.workDate = workDate;
+    }
+    public String toString(){
+        return ("Faculty " + this.getThisName());
+    }
+}
+class Staff extends Employee{
+    private String title;
+    Staff(String name,String address,String phoneNumber,String email,String office,double salary,Date acceptDate,String title){
+        super(name,address,phoneNumber,email,office,salary,acceptDate);
+        this.title = title;
+    }
+    public String toString(){
+        return ("Staff " + this.getThisName());
+    }
+}
+public class Account2007210530 {
+    public static void main(String[] args) {
+        Person person = new Person("人名","地址","电话","邮箱");
+        System.out.println(person.toString());
+        Student student = new Student("学生人名","学生地址","学生电话","学生邮箱","班级状态");
+        System.out.println(student.toString());
+        Employee employee = new Employee("雇员人名","雇员地址","雇员电话","雇员邮箱","雇员办公室",1,new Date());
+        System.out.println(employee.toString());
+        Faculty faculty = new Faculty("教员人名","教员地址","教员电话","教员邮箱","教员办公室",1,new Date(),new Date(),1);
+        System.out.println(faculty.toString());
+        Staff staff = new Staff("职员人名","职员地址杏园","职员电话","职员邮箱","职员办公室",1,new Date(),"头衔");
+        System.out.println(staff.toString());
+    }
+}
+```

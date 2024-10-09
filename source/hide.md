@@ -1,13 +1,7 @@
 ---
-title: Java考试题目汇总
+title: Hide page
 ---
 
-答案均由搜题软件搜出，不一定正确，欢迎[反馈](https://qm.qq.com/cgi-bin/qm/qr?k=GtIKywDddJguGtKz8TjrFOCw-DWsKJkT&noverify=0)
-
-<!-- more --><!-- more -->
-
-> [导出为pdf](https://api.dzzui.com/api/lanzoujx?url=https://mengchunm.lanzouw.com/iwqQo049b6fg&type=down)  
-> [导出选择题，判断题为pdf](https://api.dzzui.com/api/lanzoujx?url=https://mengchunm.lanzouw.com/iDVOr049cgre&type=down)
 
 ### 选择题
 
@@ -1194,6 +1188,31 @@ int numberOfDigits(int n){
 }
 ```
 
+{% copy n / 10 %}
+
+{% copy n != 0 %}
+
+{% folding child:codeblock open:false color:cyan 测试代码如下 %}
+
+```java
+public class test{
+	static int numberOfDigits(int n){
+		int c=0;
+		do{
+			n = n/10;
+			c++;
+		}
+		while(n!=0);
+		return c;
+	}
+	public static void main(String[] args) {
+		System.out.println(numberOfDigits(1234));
+	}
+}
+```
+
+{% endfolding %}
+
 ---
 
 子类SubClass求x的n次方。
@@ -1221,21 +1240,77 @@ class SubClass extends SuperClass {
 }
 ```
 
+{% copy super ( x , n ) %}
+{% copy s * x %}
+{% folding child:codeblock open:false color:cyan 测试代码如下 %}
+
+```java
+class SuperClass {
+	float x;
+	int n;
+	SuperClass( float x , int n ) {
+	this.x = x ;
+	this.n = n;
+	}
+}
+class SubClass extends SuperClass {
+	SubClass( float x , int n ) {
+		super(x, n);
+	}
+	double exp( ) {
+		double s = 1.0;
+		for ( int i = 1; i<=n; i++ ) {
+		s =s*x;
+		}
+		return s;
+	}
+}
+public class test{
+	public static void main(String[] args) {
+		SubClass a = new SubClass(5,3);
+		System.out.print(a.exp());
+	}
+}
+```
+{% endfolding %}
+
 ---
 
 有一对免子，从出生后第3个月起每个月都生对兔子 ，小兔子长到第三个月后每个月又生一对兔子，假如兔子都不死，问每个月的兔子总数为多少?
 
 ```java
 int fibonacci (int m) {
-intf l= 1,f2= 1,f;
-	for(inti=3;______________;i++){
+int f1= 1,f2= 1,f;
+	for(int i=3;______________;i++){
 	f = f2;
-	f2 = __________
+	f2 = ______________;`
 	f1= f;
 	System.out.println("第" + i +"个月的免子对数: "+f2);
 	}
 }
 ```
+
+{% copy i <= m %}
+{% copy f2 + f1 %}
+{% folding child:codeblock open:false color:cyan 测试代码如下 %}
+
+```java
+public class test{
+	static void fibonacci (int m) {
+		int f1= 1,f2= 1,f;
+			for(int i=3;i<=m;i++){
+			f = f2;
+			f2 =f2+f1+1;
+			f1= f;
+			System.out.println("第" + i +"个月的免子对数: "+f2);
+			}
+		}
+	public static void main(String[] args) {
+		fibonacci(10);
+	}
+}
+```
+{% endfolding %}
 
 ---
 
@@ -1255,13 +1330,32 @@ public static void main(Srting args[]){
 }
 ```
 
+{% copy 11 %}
+{% copy t.substring(endPos,t.indexOf('C')) %}
+{% folding child:codeblock open:false color:cyan 测试代码如下 %}
+
+```java
+import java.util.Date;
+public class Test2007210530{
+	public static void main(String args[]){
+        Date date1=new Date();
+        System.out.println(date1);
+        String t=date1.toString();
+        int endPos =11;
+        t=t.substring(endPos,t.indexOf('H'));
+        System. out.println(t);
+	}
+}
+```
+{% endfolding %}
+
 ---
 
 方法void primeNumber(int n )将一个正整数分解质因数。例如：输入90，打印出2\*3\*3\*5。
 
 ```java
 void primeNumber(int n) {
-	intk=2;
+	int k=2;
 	System.out.print(n + "=" );
 	while(k <= n){
 		if(k==n){
@@ -1276,6 +1370,34 @@ void primeNumber(int n) {
 	}
 }
 ```
+
+{% copy break %}
+{% copy n / k %}
+{% folding child:codeblock open:false color:cyan 测试代码如下 %}
+
+```java
+public class test{
+	static void primeNumber(int n) {
+		int k=2;
+		System.out.print(n + "=" );
+		while(k <= n){
+			if(k==n){
+				System.out.println(n);
+				break;
+			}
+			else if(n%k == 0) {
+				System.out.print(k + "*");
+				n=n/k;
+			}
+			else k++;
+		}
+	}
+	public static void main(String[] args) {
+		primeNumber(10);
+	}
+}
+```
+{% endfolding %}
 
 ---
 
@@ -1293,6 +1415,29 @@ static int maxDigit(int n){
 }
 ```
 
+{% copy n % 10 %}
+{% copy return c %}
+{% folding child:codeblock open:false color:cyan 测试代码如下 %}
+
+```java
+public class test{
+	static int maxDigit(int n){
+		int c=0,d;
+		while(n>0){
+			d = n%10;
+			if(d>c) c=d;
+			n/=10;
+		}
+		return c;
+	}
+	public static void main(String[] args) {
+		System.out.println(maxDigit(23765));
+	}
+}
+```
+
+{% endfolding %}
+
 ---
 
 方法 void MaxAndMin（int a[ ]）求数组中最大值和最小值。
@@ -1309,6 +1454,40 @@ public void MaxAndMin(int a[]){
 	System.out.println( );
 }
 ```
+
+{% copy a[0] %}
+{% copy a[i] < Min %}
+{% folding child:codeblock open:false color:cyan 测试代码如下 %}
+
+```java
+//import java.util.Scanner;
+public class test{
+	public static void MaxAndMin(int a[]){
+		int i,Max,Min;
+		Max = Min =a[0] ;
+		for ( i = 1 ; i < a.length; i++) {
+			if ( a[i]<Min )Min = a[i];
+			if ( a[i]>Max )Max = a[i];
+		}
+		System.out.println( Max+" "+Min );
+		System.out.println( );
+	}
+    public static void main(String[] args){
+        //Scanner sc=new Scanner(System.in);
+		//String a[] = sc.nextLine().split(" ");
+		//int n[] = new int[a.length];
+		//for(int i=0;i<a.length;i++){
+		//	n[i]=Integer.parseInt(a[i]);
+		//}
+		//MaxAndMin(n);
+		MaxAndMin(new int[]{1, 2, 3});
+        //int [] a = {1,2,3};
+		//MaxAndMin(a);
+	}
+}
+```
+
+{% endfolding %}
 
 ---
 
@@ -1330,6 +1509,30 @@ void narcissistic(){
 }
 ```
 
+{% copy m / 10 % 10 %}
+{% copy b1 * b1 * b1 + b2 * b2 * b2 + b3 * b3 * b3 %}
+{% folding child:codeblock open:false color:cyan 测试代码如下 %}
+
+```java
+public class test{
+	static void narcissistic(){
+		int b1, b2, b3;
+		for(int m=101; m<1000; m++) {
+			b3 = m / 100;
+			b2 = m/10%10;
+			b1 = m % 10;
+			if(b1*b1*b1+b2*b2*b2+b3*b3*b3 == m) {
+				System.out.println(m+"是一个水仙花数"); 
+			}
+		}
+	}
+	public static void main(String[] args) {
+		narcissistic();
+	}
+}
+```
+{% endfolding %}
+
 ---
 
 方法int sigmaEvenNum（int[]a）的功能是求已知数组中偶数的个数。
@@ -1344,6 +1547,28 @@ static int sigmaEvenNum(int a[]){
 	return s;
 }
 ```
+
+{% copy int i = 0 ; i < a.length ; i++ %}
+{% copy a[i] % 2 == 0 %}
+{% folding child:codeblock open:false color:cyan 测试代码如下 %}
+
+```java
+public class test{
+	static int sigmaEvenNum(int a[]){
+		int s =0;
+		for (int i=0;i<a.length;i++){
+			if(a[i]%2==0)
+			s++;
+		}
+		return s;
+	}
+	public static void main(String[] args) {
+		int a[]= {1,23,43,-36,4};
+		System.out.println(sigmaEvenNum(a));
+	}
+}
+```
+{% endfolding %}
 
 ---
 
@@ -1364,6 +1589,34 @@ class Fact {
 }
 ```
 
+1. {% copy this.n = n %}
+2. {% copy f * i %}
+
+{% folding child:codeblock open:false color:cyan 测试代码如下 %}
+
+```java
+class Fact{
+	int n ;
+	Fact( int n ) {
+		this.n=n;
+	}
+	int fact() {
+		int f = 1;
+		for (int i = 1; i <= n; i++ )
+		f = f*i;
+		return f;
+	}
+}
+public class test{
+	public static void main(String[] args) {
+		Fact a=new Fact(10);
+		System.out.print(a.fact());
+	}
+}
+```
+
+{% endfolding %}
+
 ---
 
 ### 简答题
@@ -1371,22 +1624,27 @@ class Fact {
 类CountChar有方法int countNum(String str , char a),该方法的功能是找出给定字符a在字符串str中出现的次数。
 例如,countNum("Welcome",'e')的返回值是2.
 请上传源代码截图,截图需带类名和行号。类名用给定类名+学号命名,例如161007112王明, CountChar类名为CountChar161007112java ,其余类名依此规则定义。并将运行结果截图上传,运行结果需要带输出窗口的运行时间。
-
 [最小截图工具.exe](https://api.dzzui.com/api/lanzoujx?url=https://mengchunm.lanzouw.com/i7mj203r320b&type=down)
 
----
-
-编写个计算图形面积的程序，程序能够计算并输出圆的面积。设计个图形抽象类: Shape，Shape有两个抽象方法:计算面积getArea( ) 方法。显示图形的基本信息toString( )方法。和在此基础上派生出Circle类。
-
-1. Circle类基本信息:圆心坐标、半径，園心坐标使用系统提供的Point2D类进行声明。
-
-2. Circle有默认的构造方法及带参数的构造方法，默认是圆心在(0,0)点，半径为1.0的圆;成员变量为private属性，成员方法为public属性。
-
-3. Circle类有属性的get和set方法.
-   请上传源代码截至，截图需带美名和行号。类名用给定类名+学号命名，例如161007112王明，Shape类名为
-   Shape161007112.java，其余类名依此规则定义。并将运行结果截图上传，运行结果需要带输出窗口的运行时间。
-
-   [最小截图工具.exe](https://api.dzzui.com/api/lanzoujx?url=https://mengchunm.lanzouw.com/i7mj203r320b&type=down)
+```java
+class CountChar{
+	int countNum(String str,char a){
+		int counts=0;
+		for(int i=0;i<str.length();i++){
+			if(str.charAt(i)==a)
+			counts++;
+		}
+		return counts;
+	}
+}
+public class Test2007210530{
+	public static void main(String[] args) {
+		CountChar a=new CountChar();
+		System.out.println(a.countNum("Welcome",'e'));
+		
+	}
+}
+```
 
 ---
 
@@ -1402,6 +1660,64 @@ class Fact {
 
    请上传源代码截图，截图需带类名和行号。类名用给定类名+学号命名，例如161007112王明，Student类名为 Student161007112.java，其余类名依此规则定义。并将运行结果截图上传，运行结果需要带输出窗口的运行时间。
    [最小截图工具.exe](https://api.dzzui.com/api/lanzoujx?url=https://mengchunm.lanzouw.com/i7mj203r320b&type=down)
+   
+   ```java
+   
+   public class test {
+           private String id;//学号
+           private String name;//姓名
+           private String sex;//性别
+           private int age;//年龄
+           
+   		//设置学生学号
+   		 public void setsNO(String id) {
+   		        this.id = id;
+   		}
+   		//获取学生学号
+   		public String getsNO() {
+   		        return id;
+   		}
+   		//设置姓名
+   		public void setsName(String name){
+   		        this.name = name;
+   		}
+   		//获取姓名
+   		 public String getsName() {
+   		          return name;
+   		}
+   		 //设置性别
+   		public void setsSex(String sex) {
+   		        this.sex = sex;
+   		}
+   		//获取性别
+   		 public String getsSex() {
+   		          return sex;
+   		}
+   		 //设置年龄  
+   		 public void setsAge(int age) {
+   		        this.age = age;
+   		}
+   		 //获取年龄
+   		 public int getsAge() {
+   		          return age;
+   		}
+   		//重写toString()
+   		public String toString() {
+           return "学号："+id+" 姓名："+name+" 性别："+sex+" 年龄："+age;
+   }
+           public static void main(String args[]) {
+                    test s = new test();
+                    s.setsNO("20072105");
+                    s.setsName("摇摆震");
+                    s.setsSex("男");
+                    s.setsAge(20);
+                    System.out.println(s);//打印内容为重写toString()后的内容 
+           }     
+   } 
+   
+   ```
+   
+   
 ---
 
 类Count有方法int countNum(String str)，该方法的功能是统计已知字符串str中数字的个数。 
@@ -1409,8 +1725,43 @@ class Fact {
 例如，countNum("A42B83C2D")的返回值是5。 
 
 请上传源代码截图，截图需带类名和行号。类名用给定类名+学号命名，例如161007112王明，Count类名为 Count161007112.java，其余类名依此规则定义。并将运行结果截图上传，运行结果需要带输出窗口的运行时间。
-
 [最小截图工具.exe](https://api.dzzui.com/api/lanzoujx?url=https://mengchunm.lanzouw.com/i7mj203r320b&type=down)
+
+```java
+public class Count {
+	int countNum(String str)
+	{
+		int result=0;
+		byte num[]=str.getBytes();
+		for(int i=0;i<num.length;i++)
+		{
+			if(num[i]>='0'&&num[i]<='9')
+			result++;
+		}
+		return result;
+	}
+
+	public static void main(String[] args) {
+		String s="A42B83C2D";
+		Count o=new Count();
+		System.out.print(o.countNum(s)) ;
+	}
+}
+```
+---
+
+编写个计算图形面积的程序，程序能够计算并输出圆的面积。设计个图形抽象类: Shape，Shape有两个抽象方法:计算面积getArea( ) 方法。显示图形的基本信息toString( )方法。和在此基础上派生出Circle类。
+
+1. Circle类基本信息:圆心坐标、半径，園心坐标使用系统提供的Point2D类进行声明。
+
+2. Circle有默认的构造方法及带参数的构造方法，默认是圆心在(0,0)点，半径为1.0的圆;成员变量为private属性，成员方法为public属性。
+
+3. Circle类有属性的get和set方法.
+   请上传源代码截至，截图需带美名和行号。类名用给定类名+学号命名，例如161007112王明，Shape类名为
+   Shape161007112.java，其余类名依此规则定义。并将运行结果截图上传，运行结果需要带输出窗口的运行时间。
+   [最小截图工具.exe](https://api.dzzui.com/api/lanzoujx?url=https://mengchunm.lanzouw.com/i7mj203r320b&type=down)
+
+
 
 ---
 
@@ -1436,6 +1787,8 @@ Points2D类表示平面坐标下点的坐标，必须满足如下要求：
    [最小截图工具.exe](https://api.dzzui.com/api/lanzoujx?url=https://mengchunm.lanzouw.com/i7mj203r320b&type=down)
 
 ---
+
+
 
 设计一个名为Rectangle的矩形类，并实现Comparable接口，这个类包括:
 

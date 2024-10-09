@@ -1,18 +1,16 @@
 ---
-
-tital:刷机资源整合
-
-cover: ![magisk](https://github.com/topjohnwu/Magisk/raw/master/docs/images/logo.png)
-
+title: 刷机资源整合
+cover: https://article.biliimg.com/bfs/article/2b6527995a849d783d480907bdbff0e964587936.jpg
 ---
 
-由于进来刷机方式越来越复杂，刷机所需要的资源也越来越多  
+由于近来刷机方式越来越复杂，刷机所需要的资源也越来越多  
 
 找起来比较麻烦，干脆写个整合
+<!-- more --><!-- more -->
 
 ## Android 调试桥 (adb)
 
-## 下载
+[//]: # (![img]&#40;https://s2.loli.net/2022/04/16/N9WavxViTQGKuMh.png&#41;)
 
 如果您是 Android 开发者，则应从 Android Studio 的 [SDK 管理器](https://developer.android.google.cn/studio/intro/update?hl=zh-cn#sdk-manager)或通过 [`sdkmanager`](https://developer.android.google.cn/studio/command-line/sdkmanager?hl=zh-cn) 命令行工具获取最新的 SDK Platform-Tools。这样可确保这些工具能够与其他 Android SDK 工具一起保存到正确的位置，并可轻松地进行更新。
 
@@ -23,6 +21,8 @@ cover: ![magisk](https://github.com/topjohnwu/Magisk/raw/master/docs/images/logo
 - [下载适用于 Linux 的 SDK Platform-Tools](https://dl.google.com/android/repository/platform-tools_r33.0.1-linux.zip?hl=zh-cn)
 
 ## Magisk
+
+[//]: # (![img]&#40;https://s2.loli.net/2022/04/15/i18qOxctKpVNDrE.png&#41;)
 
 [magisk](https://github.com/topjohnwu/Magisk/releases)下载并安装
 
@@ -50,11 +50,9 @@ cover: ![magisk](https://github.com/topjohnwu/Magisk/raw/master/docs/images/logo
 2. 选择并修补一个文件
 3. 选择BOOT.img
 4. 将magisk生成的magisk_patched.img文件上传至电脑
-5. 打开cmd并运行
+5. 在adb文件夹内，点击上方文件路径输入并打开cmd运行
 
-```cmd
-fastboot flash boot D:\magisk_patched.img（该文件所在地址）
-```
+{% copy fastboot flash boot D:\magisk_patched.img（该文件所在地址）%}
 
 恭喜你已经成功给你的手机输入了magisk框架
 
@@ -62,23 +60,22 @@ fastboot flash boot D:\magisk_patched.img（该文件所在地址）
 
 所以我建议你刷入第三方rec并安装mm管理器(Magisk Manager for Recovery Mode)模块
 
-- ## 第三方Rec
+### 第三方Rec
 
+[//]: # (![img]&#40;https://s2.loli.net/2022/04/16/gEM6NXAjbiTDSH5.png&#41;)
   进入Rec
 
-  |      | 电源键 | 音量- | 音量+ |  其他   |
-  | :--: | :----: | :---: | :---: | :-----: |
-  | 小米 |   ●    |       |   ●   |         |
-  | oppo |   ●    |   ●   |       |         |
-  | 一加 |   ●    |   ●   |       |         |
-  | 索尼 |   ●    |       |   ●   |         |
-  | 三星 |   ●    |       |   ●   | bixby键 |
+|      | 电源键 | 音量- | 音量+ |  其他   |
+| :--: | :----: | :---: | :---: | :-----: |
+| 小米 |   ●    |       |   ●   |         |
+| oppo |   ●    |   ●   |       |         |
+| 一加 |   ●    |   ●   |       |         |
+| 索尼 |   ●    |       |   ●   |         |
+| 三星 |   ●    |       |   ●   | bixby键 |
 
   [TWRP(Team Win Recovery Project)](https://twrp.me/Devices/)
 
-```cmd
-fastboot flash recovery D:\TWRP.img（该文件所在地址）
-```
+{% copy fastboot flash recovery D:\TWRP.img（该文件所在地址） %}
 
 ### [mm管理器](https://www.droidmirror.com/download/mm-201904040-zip)
 
@@ -96,6 +93,7 @@ fastboot flash recovery D:\TWRP.img（该文件所在地址）
 
 ### 成砖修复
 
-[小米助手](http://zhushou.xiaomi.com/?108650318)(配合<https://xiaomirom.com>)
+小米可以试试[miflash](https://miuiver.com/miflash/)(配合<https://xiaomirom.com>)
 
 可以试试保留数据刷机，不行再全部删除刷机
+

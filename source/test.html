@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('./fonts/光何体.ttf') format('truetype');
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        #fontInput {
+            font-family: 'CustomFont', "Microsoft YaHei", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="fontInput" placeholder="在这里输入文本">
+
+    <script>
+        const fontInput = document.getElementById('fontInput');
+
+        fontInput.addEventListener('input', (event) => {
+            const userInput = event.target.value;
+            fontInput.style.fontFamily = userInput ? 'CustomFont, "Microsoft YaHei", sans-serif' : 'inherit';
+        });
+    </script>
+</body>
+</html>
+@font-face {
+font-style: normal;
+font-family: '光何体';
+src: url('./fonts/光何体.ttf') format('truetype');
+}
+
+body {
+font-family: "光何体", "Microsoft YaHei", sans-serif;
+}

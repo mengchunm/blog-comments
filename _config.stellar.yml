@@ -1,11 +1,29 @@
 sidebar:
   menu:
     post: '[随笔](/)'
-    wiki: '[专栏](/wiki/)'
     notes: '[便签](/notes/)'
     more: '[更多](/more/)'
-
 comments:
   service: beaudar
   beaudar:
     repo: mengchunm/blog-comments
+
+open_graph:
+  enable: true
+  twitter_id: # for open_graph meta
+
+tag_plugins:
+  # {% emoji %}
+  emoji:
+    default:
+    blobcat: https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs/%s.png
+    bbpng: https://emoj.ml/blob%s.png
+    bbgif: https://emoj.ml/ablob%s.gif
+
+search:
+  service: local_search # local_search, todo...
+  local_search: # 在 front-matter 中设置 indexing:false 来避免被搜索索引
+    field: post # post, page, all
+    path: /search.json # 搜索文件存放位置
+    content: true # 是否搜索内容
+    codeblock: true # 是否搜索代码块（需要content: true)

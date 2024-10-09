@@ -1,3 +1,15 @@
+---
+title: 网络管理期末总结
+cover: https://article.biliimg.com/bfs/article/01867720d53f9ed1a4c07c782cd214c664587936.jpg
+---
+
+备考资料
+
+<!-- more --><!-- more -->
+
+
+<meta name="referrer" content="no-referrer">
+
 1. 网络存储结构大致分为（）
    A . 直连式存储(DAS)
 
@@ -218,7 +230,7 @@
     错误
 
 25. 当你作为乙方 甲方领导要换届了 加快 延缓 停止
- ![image-20230516200134878](C:/Users/saevio/AppData/Roaming/Typora/typora-user-images/image-20230516200134878.png)
+ ![image-20230516200134878](https://article.biliimg.com/bfs/article/92e73c7f58f7de3ee7b0d1f20432695a54d8b001.png)
 
 27. 交换机隔离冲突域，路由器隔离广播域和冲突域
 
@@ -354,6 +366,6 @@
 
 子网划分:
 
-![image-20230516204307523](C:/Users/saevio/AppData/Roaming/Typora/typora-user-images/image-20230516204307523.png)
+![image-20230516204307523](https://article.biliimg.com/bfs/article/809bcf99ae1bc886425bf2dd66394872cfbc8402.png)
 
 假设你是网管，

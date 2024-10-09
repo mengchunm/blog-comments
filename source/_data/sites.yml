@@ -1,0 +1,8 @@
+group:
+  title: 标签收藏
+  description: tools
+  items:
+    - title: 十年之约 # 标题
+      avatar: https://www.foreverblog.cn/favicon.ico  # ico
+      url: https://www.foreverblog.cn/  # 网站地址
+      screenshot: https://   # 网站截图链接

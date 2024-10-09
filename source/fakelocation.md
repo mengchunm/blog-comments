@@ -1,5 +1,5 @@
 ---
-title: 指点天下及学习通签到
+title: 指点天下签到
 cover: https://article.biliimg.com/bfs/article/953b854974e2517ed37862aa7abcf13664587936.jpg
 
 ---
@@ -47,34 +47,3 @@ cover: https://article.biliimg.com/bfs/article/953b854974e2517ed37862aa7abcf1366
 
 打开指点天下签到，多次点击右下角定位，直至模拟成功
 
-## 学习通
-
-<font color='red'>希望大家能多在群里共享签到二维码或链接，互帮互助嘛</font>
-
-首先下载超星学习通签到-安卓端
-
-github下载地址https://github.com/james-curtis/chaoxing-sign-app/releases
-
-蓝奏云下载地址https://yunling.lanzout.com/b00pntoqd 密码:2uda
-
-签到类型
-
-- **普通签到&手势签到&签到码签到：** 直接签到
-
-- **二维码签到（无视每十秒刷新）：** 
-
-  <img src="https://article.biliimg.com/bfs/article/c0c553a97f027f439deebdfc16489d6d6f23813a.jpg" alt="new ducument" style="zoom: 33%;" />
-
-  1. 直接扫描二维码图片，确保清晰
-
-  2. 扫描二维码获取以=id为结尾的链接
-
-     > https://passport2.chaoxing.com/mloginnewversion=true&refer=https://mobilelearn.chaoxing.com:80/widget/sign/e?id=7000061275973&c=7000061275973&enc=569051D34AFB5477C1FBBCCE87F43A40&DB_STRATEGY=PRIMARY_KEY&STRATEGY_PARA=id 
-
-     在软件签到界面输入该链接即可签到<font color='red'>（ 注意，很多软件扫码后会直接跳转导致链接不完整，请提前使用上方二维码测试确认一下）</font>
-
-  3. 或者输入链接中的enc参数：enc=569051D34AFB5477C1FBBCCE87F43A40
-
-- **位置签到：** 直接在弹出的地图中选择签到地点即可
-
-- **拍照签到：** 选择手机中的图片上传即可。也可以选择普通签到，此时不会上传图片，但是可以签到成功（教师端会有显示没有图片）
